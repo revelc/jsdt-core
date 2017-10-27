@@ -146,9 +146,10 @@
           <artifactId>maven-release-plugin</artifactId>
           <version>2.5.3</version>
           <configuration>
-            <addSchema>false</addSchema>
             <arguments>-Pgpg-sign</arguments>
             <goals>clean deploy</goals>
+            <preparationGoals>clean scm:add scm:checkin -Dincludes=META-INF/MANIFEST.MF -Dmessage="Increment Bundle-Version for release" -DpushChanges=false</preparationGoals>
+            <completionGoals>clean scm:add scm:checkin -Dincludes=META-INF/MANIFEST.MF -Dmessage="Increment Bundle-Version for snapshot" -DpushChanges=false</completionGoals>
             <localCheckout>true</localCheckout>
             <pushChanges>false</pushChanges>
             <useReleaseProfile>false</useReleaseProfile>
@@ -158,6 +159,11 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-scm-plugin</artifactId>
+          <version>1.9.5</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
