@@ -1,3 +1,4 @@
+# Maven
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -10,3 +11,29 @@ buildNumber.properties
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse
+.classpath
+.factorypath
+.metadata
+.gradle
+.settings/
+.loadpath
+.project
+.externalToolBuilders/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+.nb-gradle/
+
+# Intellij
+*.iml
+.idea/
+*.ipr
+*.iws
