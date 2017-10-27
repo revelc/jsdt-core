@@ -6,4 +6,4 @@ cache:
     - $HOME/.m2
 # skip pre-fetch of maven dependencies by making install step a NOOP
 install: true
-script: mvn clean verify javadoc:jar source:jar
+script: mvn clean verify
