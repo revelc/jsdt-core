@@ -53,7 +53,7 @@
   </distributionManagement>
   <properties>
     <autoVersionSubmodules>true</autoVersionSubmodules>
-    <eclipse-repo.url>http://download.eclipse.org/releases/neon</eclipse-repo.url>
+    <eclipse-repo.url>http://download.eclipse.org/releases/oxygen</eclipse-repo.url>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.testSource>1.8</maven.compiler.testSource>
