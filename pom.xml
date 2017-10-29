@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.revelc.code.formatter</groupId>
   <artifactId>jsdt-core</artifactId>
-  <version>2.5.1-SNAPSHOT</version>
+  <version>2.6.1-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
   <name>Eclipse JSDT Core Bundle</name>
   <description>Repackaging of Eclipse JSDT bundled for Maven Central</description>
