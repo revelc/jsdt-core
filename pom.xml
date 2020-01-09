@@ -20,6 +20,9 @@
     <developer>
       <name>Christopher Tubbs</name>
     </developer>
+    <developer>
+      <name>Jeremy Landis</name>
+    </developer>
   </developers>
   <mailingLists>
     <mailingList />
@@ -54,10 +57,9 @@
   <properties>
     <autoVersionSubmodules>true</autoVersionSubmodules>
     <eclipse-repo.url>http://download.eclipse.org/releases/2019-12</eclipse-repo.url>
+    <maven.compiler.release>8</maven.compiler.release>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.testSource>1.8</maven.compiler.testSource>
-    <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
     <!-- no useful site docs to deploy at this time -->
     <maven.site.deploy.skip>true</maven.site.deploy.skip>
     <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
@@ -136,9 +138,8 @@
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>3.1.1</version>
           <configuration>
-            <javadocVersion>${maven.compiler.source}</javadocVersion>
-            <additionalparam>-Xdoclint:all,-Xdoclint:-missing</additionalparam>
             <quiet>true</quiet>
+            <doclint>all,-missing</doclint>
           </configuration>
         </plugin>
         <plugin>
@@ -167,11 +168,6 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-source-plugin</artifactId>
-          <version>3.2.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M4</version>
         </plugin>
@@ -193,6 +189,11 @@
         <plugin>
           <groupId>org.eclipse.tycho</groupId>
           <artifactId>tycho-maven-plugin</artifactId>
+          <version>${tychoVersion}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.eclipse.tycho</groupId>
+          <artifactId>tycho-source-plugin</artifactId>
           <version>${tychoVersion}</version>
         </plugin>
       </plugins>
@@ -285,10 +286,11 @@
             <configuration>
               <rules>
                 <requireMavenVersion>
-                  <version>[3.0.5,)</version>
+                  <!-- require min 3.6.2 for https://issues.apache.org/jira/browse/MNG-6669 -->
+                  <version>[3.6.2,)</version>
                 </requireMavenVersion>
                 <requireJavaVersion>
-                  <version>[${maven.compiler.source},)</version>
+                  <version>[11,)</version>
                 </requireJavaVersion>
               </rules>
             </configuration>
@@ -303,18 +305,6 @@
             <id>attach-javadocs</id>
             <goals>
               <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <goals>
-              <goal>jar-no-fork</goal>
             </goals>
           </execution>
         </executions>
@@ -357,6 +347,18 @@
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-maven-plugin</artifactId>
         <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>plugin-source</id>
+            <goals>
+              <goal>plugin-source</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
