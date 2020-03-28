@@ -147,8 +147,8 @@
           <configuration>
             <arguments>-Pgpg-sign</arguments>
             <goals>clean deploy</goals>
-            <preparationGoals>clean scm:add scm:checkin -Dincludes=META-INF/MANIFEST.MF -Dmessage="Increment Bundle-Version for release" -DpushChanges=false</preparationGoals>
-            <completionGoals>clean scm:add scm:checkin -Dincludes=META-INF/MANIFEST.MF -Dmessage="Increment Bundle-Version for snapshot" -DpushChanges=false</completionGoals>
+            <preparationGoals>clean scm:add scm:checkin -Dincludes=META-INF/MANIFEST.MF -Dmessage="[maven-release-plugin] Increment Bundle-Version for release" -DpushChanges=false</preparationGoals>
+            <completionGoals>clean scm:add scm:checkin -Dincludes=META-INF/MANIFEST.MF -Dmessage="[maven-release-plugin] Increment Bundle-Version for snapshot" -DpushChanges=false</completionGoals>
             <localCheckout>true</localCheckout>
             <pushChanges>false</pushChanges>
             <useReleaseProfile>false</useReleaseProfile>
