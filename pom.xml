@@ -56,14 +56,14 @@
   </distributionManagement>
   <properties>
     <autoVersionSubmodules>true</autoVersionSubmodules>
-    <eclipse-repo.url>http://download.eclipse.org/releases/2019-12</eclipse-repo.url>
+    <eclipse-repo.url>http://download.eclipse.org/releases/2020-03</eclipse-repo.url>
     <maven.compiler.release>8</maven.compiler.release>
     <!-- no useful site docs to deploy at this time -->
     <maven.site.deploy.skip>true</maven.site.deploy.skip>
     <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <tychoVersion>1.5.1</tychoVersion>
+    <tychoVersion>1.6.0</tychoVersion>
   </properties>
   <repositories>
     <repository>
@@ -78,7 +78,7 @@
         <plugin>
           <groupId>com.github.ekryd.sortpom</groupId>
           <artifactId>sortpom-maven-plugin</artifactId>
-          <version>2.10.0</version>
+          <version>2.11.0</version>
           <configuration>
             <createBackupFile>false</createBackupFile>
             <expandEmptyElements>false</expandEmptyElements>
@@ -104,7 +104,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>3.1.1</version>
+          <version>3.1.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -134,7 +134,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.1.1</version>
+          <version>3.2.0</version>
           <configuration>
             <quiet>true</quiet>
             <doclint>all,-missing</doclint>
@@ -285,7 +285,7 @@
               <rules>
                 <requireMavenVersion>
                   <!-- require min 3.6.2 for https://issues.apache.org/jira/browse/MNG-6669 -->
-                  <version>[3.6.2,)</version>
+                  <version>[3.6.3,)</version>
                 </requireMavenVersion>
                 <requireJavaVersion>
                   <version>[11,)</version>
