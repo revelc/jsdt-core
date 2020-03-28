@@ -58,8 +58,6 @@
     <autoVersionSubmodules>true</autoVersionSubmodules>
     <eclipse-repo.url>http://download.eclipse.org/releases/2019-12</eclipse-repo.url>
     <maven.compiler.release>8</maven.compiler.release>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
     <!-- no useful site docs to deploy at this time -->
     <maven.site.deploy.skip>true</maven.site.deploy.skip>
     <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
