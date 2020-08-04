@@ -5,7 +5,7 @@
 [![Issues](https://img.shields.io/github/issues/revelc/jsdt-core.svg)](https://github.com/revelc/jsdt-core/issues)
 [![Forks](https://img.shields.io/github/forks/revelc/jsdt-core.svg)](https://github.com/revelc/jsdt-core/network)
 [![Stars](https://img.shields.io/github/stars/revelc/jsdt-core.svg)](https://github.com/revelc/jsdt-core/stargazers)
-[![Apache License](http://img.shields.io/badge/license-EPL-blue.svg)](https://github.com/revelc/jsdt-core/blob/master/LICENSE)
+[![Apache License](http://img.shields.io/badge/license-EPL-blue.svg)](https://github.com/revelc/jsdt-core/blob/main/LICENSE)
 
 A small [Tycho] project which repackages the jsdt-core library from the
 [Eclipse] project into a bundle to publish to [Maven Central] to use as a
