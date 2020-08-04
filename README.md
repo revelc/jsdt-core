@@ -15,7 +15,7 @@ dependency in other [Maven] projects, such as [formatter-maven-plugin].
 [ci_img]: https://github.com/revelc/jsdt-core/workflows/mvn%20verify/badge.svg
 [ci_link]: https://github.com/revelc/jsdt-core/actions
 [formatter-maven-plugin]: https://github.com/revelc/formatter-maven-plugin
-[license_img]: http://img.shields.io/badge/license-EPL-blue.svg
+[license_img]: https://img.shields.io/badge/license-EPL%201.0-blue.svg
 [license_link]: https://github.com/revelc/jsdt-core/blob/main/LICENSE
 [maven_img]: https://maven-badges.herokuapp.com/maven-central/net.revelc.code.formatter/jsdt-core/badge.svg
 [maven_link]: https://maven-badges.herokuapp.com/maven-central/net.revelc.code.formatter/jsdt-core
