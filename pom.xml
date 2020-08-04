@@ -38,8 +38,8 @@
     <url>https://github.com/revelc/jsdt-core/issues</url>
   </issueManagement>
   <ciManagement>
-    <system>travis</system>
-    <url>https://travis-ci.org/revelc/jsdt-core/</url>
+    <system>GitHub</system>
+    <url>https://github.com/revelc/jsdt-core/actions</url>
   </ciManagement>
   <distributionManagement>
     <!-- https://issues.sonatype.org/browse/OSSRH-15142 -->
