@@ -63,7 +63,7 @@
     <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <tychoVersion>2.0.0</tychoVersion>
+    <tychoVersion>2.1.0</tychoVersion>
   </properties>
   <repositories>
     <repository>
