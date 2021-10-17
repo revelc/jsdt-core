@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.revelc.code.formatter</groupId>
   <artifactId>jsdt-core</artifactId>
@@ -25,7 +25,7 @@
     </developer>
   </developers>
   <mailingLists>
-    <mailingList />
+    <mailingList/>
   </mailingLists>
   <scm>
     <connection>scm:git:https://github.com/revelc/jsdt-core.git</connection>
@@ -56,7 +56,7 @@
   </distributionManagement>
   <properties>
     <autoVersionSubmodules>true</autoVersionSubmodules>
-    <eclipse-repo.url>http://download.eclipse.org/releases/2020-06</eclipse-repo.url>
+    <eclipse-repo.url>http://download.eclipse.org/releases/2020-09</eclipse-repo.url>
     <maven.compiler.release>8</maven.compiler.release>
     <!-- no useful site docs to deploy at this time -->
     <maven.site.deploy.skip>true</maven.site.deploy.skip>
