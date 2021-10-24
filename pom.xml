@@ -56,8 +56,8 @@
   </distributionManagement>
   <properties>
     <autoVersionSubmodules>true</autoVersionSubmodules>
-    <eclipse-repo.url>http://download.eclipse.org/releases/2020-09</eclipse-repo.url>
-    <maven.compiler.release>8</maven.compiler.release>
+    <eclipse-repo.url>http://download.eclipse.org/releases/2021-09</eclipse-repo.url>
+    <maven.compiler.release>11</maven.compiler.release>
     <!-- no useful site docs to deploy at this time -->
     <maven.site.deploy.skip>true</maven.site.deploy.skip>
     <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
