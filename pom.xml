@@ -57,7 +57,10 @@
   <properties>
     <autoVersionSubmodules>true</autoVersionSubmodules>
     <eclipse-repo.url>http://download.eclipse.org/releases/2021-09</eclipse-repo.url>
+    <!-- all 3 are needed, because some plugins might use the source/target variables -->
     <maven.compiler.release>11</maven.compiler.release>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
     <!-- no useful site docs to deploy at this time -->
     <maven.site.deploy.skip>true</maven.site.deploy.skip>
     <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
