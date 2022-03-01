@@ -57,6 +57,8 @@
   <properties>
     <autoVersionSubmodules>true</autoVersionSubmodules>
     <eclipse-repo.url>http://download.eclipse.org/releases/2021-12</eclipse-repo.url>
+    <!-- because of https://issues.apache.org/jira/browse/MCOMPILER-485 -->
+    <maven.compiler.createMissingPackageInfoClass>false</maven.compiler.createMissingPackageInfoClass>
     <!-- all 3 are needed, because some plugins might use the source/target variables -->
     <maven.compiler.release>11</maven.compiler.release>
     <maven.compiler.source>11</maven.compiler.source>
