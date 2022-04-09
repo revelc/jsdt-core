@@ -235,17 +235,8 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-release-plugin</artifactId>
-					<version>3.0.0-M5</version>
-					<configuration>
-						<arguments>-Pgpg-sign</arguments>
-						<goals>clean deploy</goals>
-						<preparationGoals>clean scm:add scm:checkin -Dincludes=META-INF/MANIFEST.MF -Dmessage="[maven-release-plugin] Increment Bundle-Version for release" -DpushChanges=false</preparationGoals>
-						<completionGoals>clean scm:add scm:checkin -Dincludes=META-INF/MANIFEST.MF -Dmessage="[maven-release-plugin] Increment Bundle-Version for snapshot" -DpushChanges=false</completionGoals>
-						<localCheckout>true</localCheckout>
-						<pushChanges>false</pushChanges>
-						<useReleaseProfile>false</useReleaseProfile>
-					</configuration>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>3.2.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -266,6 +257,16 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>versions-maven-plugin</artifactId>
 					<version>2.10.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.sonatype.plugins</groupId>
+					<artifactId>nexus-staging-maven-plugin</artifactId>
+					<version>1.6.12</version>
+					<configuration>
+						<serverId>sonatype-nexus-staging</serverId>
+						<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+						<autoReleaseAfterClose>true</autoReleaseAfterClose>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
