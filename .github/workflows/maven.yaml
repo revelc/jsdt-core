@@ -17,9 +17,11 @@ name: mvn verify
 
 on:
   push:
-    branches: [ main ]
+    branches:
+    - release/*
   pull_request:
-    branches: [ main ]
+    branches:
+    - main
 
 jobs:
   build:
