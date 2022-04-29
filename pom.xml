@@ -51,11 +51,6 @@
 	</ciManagement>
 
 	<distributionManagement>
-		<site>
-			<id>github</id>
-			<name>Maven Site Distribution</name>
-			<url>scm:git:https://github.com/funfried/externalcodeformatter_for_netbeans.git</url>
-		</site>
 		<repository>
 			<id>sonatype-nexus-staging</id>
 			<name>Nexus Release Repository</name>
@@ -89,7 +84,7 @@
 		<project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<tychoVersion>2.7.0</tychoVersion>
+		<tychoVersion>2.7.1</tychoVersion>
 	</properties>
 
 	<dependencyManagement>
@@ -187,7 +182,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-clean-plugin</artifactId>
-					<version>3.1.0</version>
+					<version>3.2.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -227,7 +222,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>3.3.2</version>
+					<version>3.4.0</version>
 					<configuration>
 						<quiet>true</quiet>
 						<doclint>all,-missing</doclint>
@@ -261,7 +256,7 @@
 				<plugin>
 					<groupId>org.sonatype.plugins</groupId>
 					<artifactId>nexus-staging-maven-plugin</artifactId>
-					<version>1.6.12</version>
+					<version>1.6.13</version>
 					<configuration>
 						<serverId>sonatype-nexus-staging</serverId>
 						<nexusUrl>https://oss.sonatype.org/</nexusUrl>
@@ -445,11 +440,11 @@
 				<repository>
 					<id>github</id>
 					<name>GitHub funfried Apache Maven Packages</name>
-					<url>https://maven.pkg.github.com/funfried/externalcodeformatter_for_netbeans</url>
+					<url>https://maven.pkg.github.com/funfried/jsdt-core</url>
 				</repository>
 				<snapshotRepository>
 					<id>github</id>
-					<url>https://maven.pkg.github.com/funfried/externalcodeformatter_for_netbeans</url>
+					<url>https://maven.pkg.github.com/funfried/jsdt-core</url>
 				</snapshotRepository>
 			</distributionManagement>
 		</profile>
