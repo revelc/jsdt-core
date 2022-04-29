@@ -130,6 +130,11 @@
 				<version>3.20.1</version>
 			</dependency>
 			<dependency>
+				<groupId>org.checkerframework</groupId>
+				<artifactId>checker-qual</artifactId>
+				<version>3.21.4</version>
+			</dependency>
+			<dependency>
 				<groupId>com.ibm.icu</groupId>
 				<artifactId>icu4j</artifactId>
 				<version>71.1</version>
@@ -157,6 +162,10 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.checkerframework</groupId>
+			<artifactId>checker-qual</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.google.j2objc</groupId>
@@ -337,7 +346,7 @@
 						<phase>prepare-package</phase>
 						<configuration>
 							<outputDirectory>${project.build.outputDirectory}</outputDirectory>
-							<excludeGroupIds>com.google.code.gson,com.google.guava,com.google.javascript,com.google.errorprone,com.google.code.findbugs,com.google.j2objc,com.google.protobuf,com.ibm.icu</excludeGroupIds>
+							<excludeGroupIds>com.google.code.gson,com.google.guava,com.google.javascript,com.google.errorprone,com.google.code.findbugs,com.google.j2objc,com.google.protobuf,com.ibm.icu,org.checkerframework</excludeGroupIds>
 							<excludeArtifactIds>com.google.gson,com.google.guava,com.google.javascript,com.google.protobuf,protobuf-java,com.ibm.icu</excludeArtifactIds>
 							<excludes>META-INF/*</excludes>
 						</configuration>
