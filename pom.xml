@@ -56,7 +56,7 @@
   </distributionManagement>
   <properties>
     <autoVersionSubmodules>true</autoVersionSubmodules>
-    <eclipse-repo.url>http://download.eclipse.org/releases/2021-12</eclipse-repo.url>
+    <eclipse-repo.url>http://download.eclipse.org/releases/2022-06</eclipse-repo.url>
     <!-- all 3 are needed, because some plugins might use the source/target variables -->
     <maven.compiler.release>11</maven.compiler.release>
     <maven.compiler.source>11</maven.compiler.source>
