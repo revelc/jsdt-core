@@ -34,3 +34,4 @@ nb-configuration.xml
 .idea/
 *.ipr
 *.iws
+.tycho-consumer-pom.xml
