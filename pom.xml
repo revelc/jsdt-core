@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>net.revelc.code</groupId>
+    <artifactId>revelc</artifactId>
+    <version>4</version>
+  </parent>
   <groupId>net.revelc.code.formatter</groupId>
   <artifactId>jsdt-core</artifactId>
   <version>3.3.1-SNAPSHOT</version>
@@ -11,7 +16,7 @@
   <inceptionYear>2017</inceptionYear>
   <licenses>
     <license>
-      <name>Eclipse Public License</name>
+      <name>EPL-2.0</name>
       <url>https://www.eclipse.org/legal/epl-v20.html</url>
       <distribution>repo</distribution>
     </license>
@@ -24,48 +29,15 @@
       <name>Jeremy Landis</name>
     </developer>
   </developers>
-  <mailingLists>
-    <mailingList />
-  </mailingLists>
   <scm>
-    <connection>scm:git:https://github.com/revelc/jsdt-core.git</connection>
-    <developerConnection>scm:git:git@github.com/revelc/jsdt-core.git</developerConnection>
     <tag>HEAD</tag>
-    <url>https://github.com/revelc/jsdt-core</url>
   </scm>
-  <issueManagement>
-    <system>GitHub</system>
-    <url>https://github.com/revelc/jsdt-core/issues</url>
-  </issueManagement>
-  <ciManagement>
-    <system>GitHub</system>
-    <url>https://github.com/revelc/jsdt-core/actions</url>
-  </ciManagement>
-  <distributionManagement>
-    <!-- https://issues.sonatype.org/browse/OSSRH-15142 -->
-    <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Sonatype Release Distribution Staging Repository</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-    </repository>
-    <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Snapshot Distribution Repository</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
   <properties>
-    <autoVersionSubmodules>true</autoVersionSubmodules>
     <eclipse-repo.url>https://download.eclipse.org/releases/2023-03</eclipse-repo.url>
-    <!-- all 3 are needed, because some plugins might use the source/target variables -->
+    <license.skip>true</license.skip>
     <maven.compiler.release>11</maven.compiler.release>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-    <!-- no useful site docs to deploy at this time -->
-    <maven.site.deploy.skip>true</maven.site.deploy.skip>
-    <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <mdep.analyze.skip>true</mdep.analyze.skip>
+    <rat.skip>true</rat.skip>
     <tychoVersion>3.0.5</tychoVersion>
   </properties>
   <repositories>
@@ -79,112 +51,22 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <groupId>com.github.ekryd.sortpom</groupId>
-          <artifactId>sortpom-maven-plugin</artifactId>
-          <version>3.3.0</version>
+          <groupId>org.apache.rat</groupId>
+          <artifactId>apache-rat-plugin</artifactId>
           <configuration>
-            <createBackupFile>false</createBackupFile>
-            <expandEmptyElements>false</expandEmptyElements>
-            <keepBlankLines>false</keepBlankLines>
-            <lineSeparator>\n</lineSeparator>
-            <nrOfIndentSpace>2</nrOfIndentSpace>
-            <predefinedSortOrder>recommended_2008_06</predefinedSortOrder>
-            <sortDependencies>scope,groupId,artifactId</sortDependencies>
-            <sortProperties>true</sortProperties>
-            <spaceBeforeCloseEmptyElement>true</spaceBeforeCloseEmptyElement>
-            <verifyFail>Stop</verifyFail>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.3.2</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.12.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-dependency-plugin</artifactId>
-          <version>3.6.1</version>
-          <dependencies>
-            <!-- Use latest plexus archiver to resolve excessive false warnings until maven updates mdep -->
-            <dependency>
-              <groupId>org.codehaus.plexus</groupId>
-              <artifactId>plexus-archiver</artifactId>
-              <version>4.9.1</version>
-            </dependency>
-          </dependencies>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.1.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.4.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-gpg-plugin</artifactId>
-          <version>3.1.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>3.1.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.3.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.6.3</version>
-          <configuration>
-            <quiet>true</quiet>
-            <doclint>all,-missing</doclint>
+            <excludes>
+              <exclude>README.md</exclude>
+            </excludes>
           </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>3.0.1</version>
           <configuration>
-            <arguments>-Pgpg-sign</arguments>
             <goals>clean deploy</goals>
             <preparationGoals>clean scm:add scm:checkin -Dincludes=META-INF/MANIFEST.MF -Dmessage="[maven-release-plugin] Increment Bundle-Version for release" -DpushChanges=false</preparationGoals>
             <completionGoals>clean scm:add scm:checkin -Dincludes=META-INF/MANIFEST.MF -Dmessage="[maven-release-plugin] Increment Bundle-Version for snapshot" -DpushChanges=false</completionGoals>
-            <localCheckout>true</localCheckout>
-            <pushChanges>false</pushChanges>
-            <useReleaseProfile>false</useReleaseProfile>
           </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.3.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-scm-plugin</artifactId>
-          <version>2.0.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.2.3</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>versions-maven-plugin</artifactId>
-          <version>2.16.2</version>
         </plugin>
         <plugin>
           <groupId>org.eclipse.tycho</groupId>
@@ -209,26 +91,6 @@
       </plugins>
     </pluginManagement>
     <plugins>
-      <plugin>
-        <groupId>com.github.ekryd.sortpom</groupId>
-        <artifactId>sortpom-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>sort-pom</id>
-            <goals>
-              <goal>sort</goal>
-            </goals>
-            <phase>process-sources</phase>
-          </execution>
-          <execution>
-            <id>verify-pom</id>
-            <goals>
-              <goal>verify</goal>
-            </goals>
-            <phase>process-resources</phase>
-          </execution>
-        </executions>
-      </plugin>
       <plugin>
         <groupId>io.github.floverfelt</groupId>
         <artifactId>find-and-replace-maven-plugin</artifactId>
@@ -275,41 +137,6 @@
               <outputDirectory>${project.build.outputDirectory}</outputDirectory>
               <excludes>META-INF/*</excludes>
             </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>enforce-basic</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <requireMavenVersion>
-                  <!-- require min 3.6.2+ for https://issues.apache.org/jira/browse/MNG-6669 -->
-                  <version>[3.6.3,)</version>
-                </requireMavenVersion>
-                <requireJavaVersion>
-                  <version>[11,)</version>
-                </requireJavaVersion>
-              </rules>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
           </execution>
         </executions>
       </plugin>
@@ -366,26 +193,4 @@
       </plugin>
     </plugins>
   </build>
-  <profiles>
-    <profile>
-      <id>gpg-sign</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>sign-artifacts</id>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-                <phase>verify</phase>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 </project>
