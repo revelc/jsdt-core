@@ -54,7 +54,7 @@ SPDX-License-Identifier: EPL-2.0
     <mdep.analyze.skip>true</mdep.analyze.skip>
     <!-- rat plugin is no good at validating EPL headers out of the box -->
     <rat.skip>true</rat.skip>
-    <tychoVersion>3.0.5</tychoVersion>
+    <tychoVersion>4.0.5</tychoVersion>
   </properties>
   <repositories>
     <repository>
