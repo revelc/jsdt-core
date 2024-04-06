@@ -151,7 +151,7 @@ SPDX-License-Identifier: EPL-2.0
             <configuration>
               <outputDirectory>${project.build.outputDirectory}</outputDirectory>
               <excludes>META-INF/*</excludes>
-              <includeArtifactIds>org.eclipse.core.runtime,org.eclipse.equinox.common,org.eclipse.equinox.registry,org.eclipse.wst.jsdt.core,org.eclipse.wst.common.core,org.eclipse.wst.common.environment,org.eclipse.wst.common.frameworks,org.eclipse.wst.common.project.facet.core,org.eclipse.wst.validation</includeArtifactIds>
+              <includeArtifactIds>org.eclipse.core.runtime,org.eclipse.equinox.common,org.eclipse.equinox.registry,org.eclipse.text,org.eclipse.wst.jsdt.core,org.eclipse.wst.common.core,org.eclipse.wst.common.environment,org.eclipse.wst.common.frameworks,org.eclipse.wst.common.project.facet.core,org.eclipse.wst.validation</includeArtifactIds>
             </configuration>
           </execution>
         </executions>
