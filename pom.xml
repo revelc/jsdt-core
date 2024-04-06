@@ -40,7 +40,10 @@
     </developer>
   </developers>
   <scm>
+    <connection>scm:git:https://github.com/revelc/jsdt-core.git</connection>
+    <developerConnection>scm:git:git@github.com/revelc/jsdt-core.git</developerConnection>
     <tag>HEAD</tag>
+    <url>https://github.com/revelc/jsdt-core</url>
   </scm>
   <properties>
     <eclipse-repo.url>https://download.eclipse.org/releases/2024-03</eclipse-repo.url>
