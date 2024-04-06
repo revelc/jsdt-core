@@ -18,7 +18,7 @@
   </parent>
   <groupId>net.revelc.code.formatter</groupId>
   <artifactId>jsdt-core</artifactId>
-  <version>3.3.1-SNAPSHOT</version>
+  <version>3.4.0-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
   <name>Eclipse JSDT Core Bundle</name>
   <description>Repackaging of Eclipse JSDT bundled for Maven Central</description>
@@ -51,7 +51,7 @@ which is available at https://www.eclipse.org/legal/epl-2.0/
 
 SPDX-License-Identifier: EPL-2.0
 ]]></licenseText>
-    <maven.compiler.release>11</maven.compiler.release>
+    <maven.compiler.release>17</maven.compiler.release>
     <mdep.analyze.skip>true</mdep.analyze.skip>
     <!-- rat plugin is no good at validating EPL headers out of the box -->
     <rat.skip>true</rat.skip>
