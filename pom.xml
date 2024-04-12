@@ -55,6 +55,8 @@ which is available at https://www.eclipse.org/legal/epl-2.0/
 SPDX-License-Identifier: EPL-2.0
 ]]></licenseText>
     <maven.compiler.release>17</maven.compiler.release>
+    <!-- Source has to be skipped with tycho as it is building the source -->
+    <maven.source.skip>true</maven.source.skip>
     <mdep.analyze.skip>true</mdep.analyze.skip>
     <!-- rat plugin is no good at validating EPL headers out of the box -->
     <rat.skip>true</rat.skip>
