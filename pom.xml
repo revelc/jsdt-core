@@ -18,7 +18,7 @@
   </parent>
   <groupId>net.revelc.code.formatter</groupId>
   <artifactId>jsdt-core</artifactId>
-  <version>3.4.5-SNAPSHOT</version>
+  <version>3.5.0-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
   <name>Eclipse JSDT Core Bundle</name>
   <description>Repackaging of Eclipse JSDT bundled for Maven Central</description>
@@ -46,7 +46,7 @@
     <url>https://github.com/revelc/jsdt-core</url>
   </scm>
   <properties>
-    <eclipse-repo.url>https://download.eclipse.org/releases/2024-03</eclipse-repo.url>
+    <eclipse-repo.url>https://download.eclipse.org/releases/2024-06</eclipse-repo.url>
     <licenseText><![CDATA[
 This program and the accompanying materials are made
 available under the terms of the Eclipse Public License 2.0
@@ -60,6 +60,7 @@ SPDX-License-Identifier: EPL-2.0
     <mdep.analyze.skip>true</mdep.analyze.skip>
     <!-- rat plugin is no good at validating EPL headers out of the box -->
     <rat.skip>true</rat.skip>
+    <revelc.min-build-mvn>3.9.0</revelc.min-build-mvn>
     <tychoVersion>4.0.8</tychoVersion>
   </properties>
   <repositories>
