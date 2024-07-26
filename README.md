@@ -5,10 +5,11 @@
 [![License][license_img]][license_link]
 
 A small [Tycho] project which repackages the jsdt-core library from the
-[Eclipse] project into a bundle to publish to [Maven Central] to use as a
-dependency in other [Maven] projects, such as [formatter-maven-plugin].
+[Eclipse JavaScript Development Tools (JSDT)][JSDT] project into a bundle to
+publish to [Maven Central] to use as a dependency in other [Maven] projects,
+such as [formatter-maven-plugin].
 
-[Eclipse]: https://www.eclipse.org/
+[JSDT]: https://eclipse.dev/webtools/jsdt/
 [Maven Central]: https://search.maven.org/
 [Maven]: https://maven.apache.org/
 [Tycho]: https://www.eclipse.org/tycho/
