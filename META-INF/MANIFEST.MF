@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Eclipse JSDT core
 Bundle-SymbolicName: jsdt-core
 Bundle-Vendor: Revelc
-Bundle-Version: 3.5.0.qualifier
+Bundle-Version: 3.5.0
 Require-Bundle: org.eclipse.wst.jsdt.core;bundle-version="[1.0.0,10.0.0)"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Automatic-Module-Name: org.eclipse.wst.jsdt.core
