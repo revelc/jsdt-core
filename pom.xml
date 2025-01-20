@@ -18,7 +18,7 @@
   </parent>
   <groupId>net.revelc.code.formatter</groupId>
   <artifactId>jsdt-core</artifactId>
-  <version>3.5.0</version>
+  <version>3.5.1-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
   <name>Eclipse JSDT Core Bundle</name>
   <description>Repackaging of Eclipse JSDT bundled for Maven Central</description>
@@ -42,7 +42,7 @@
   <scm>
     <connection>scm:git:https://github.com/revelc/jsdt-core.git</connection>
     <developerConnection>scm:git:git@github.com/revelc/jsdt-core.git</developerConnection>
-    <tag>jsdt-core-3.5.0</tag>
+    <tag>HEAD</tag>
     <url>https://github.com/revelc/jsdt-core</url>
   </scm>
   <properties>
