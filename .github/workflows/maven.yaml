@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
-        java: [17, 21]
+        java: [21]
       fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
@@ -22,7 +22,7 @@ jobs:
         distribution: temurin
         cache: 'maven'
     - name: Download Maven Wrapper
-      run: mvn wrapper:wrapper "-Dmaven=3.9.6"
+      run: mvn wrapper:wrapper "-Dmaven=3.9.9"
     - name: Build with Maven
       run: ./mvnw -B -V -e "-Dstyle.color=always" verify -DskipFormat -DverifyFormat
       env:
