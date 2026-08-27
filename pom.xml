@@ -60,7 +60,7 @@ SPDX-License-Identifier: EPL-2.0
     <!-- rat plugin is no good at validating EPL headers out of the box -->
     <rat.skip>true</rat.skip>
     <revelc.min-build-mvn>3.9.9</revelc.min-build-mvn>
-    <tychoVersion>5.0.3</tychoVersion>
+    <tychoVersion>5.0.4</tychoVersion>
   </properties>
   <repositories>
     <repository>
